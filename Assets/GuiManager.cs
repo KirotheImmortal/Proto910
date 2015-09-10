@@ -29,8 +29,17 @@ public class GuiManager : MonoBehaviour
         killtext.gameObject.SetActive(!killtext.IsActive());
     }
 
+    public void escbutton()
+    {
 
+        Application.Quit();
+    }
 
+    public void rebutton()
+    {
+        Application.LoadLevel("main");
+    }
 
+    
 
 }

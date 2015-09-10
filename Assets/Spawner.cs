@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (time > timer)
+        if (time > timer && !GameObject.Find("Player").GetComponent<Controlls>().died)
         {
             Instantiate(enemy_prefab, gameObject.GetComponent<Transform>().position, new Quaternion(0,0,0,0));
             time = 0.0f;

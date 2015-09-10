@@ -56,26 +56,26 @@ public class Controlls : MonoBehaviour
             {
                 gameObject.GetComponent<Transform>().localPosition += gameObject.GetComponent<Transform>().forward * speed / 100;
                 if (!gameObject.GetComponent<Animation>().IsPlaying("attack"))
-                    gameObject.GetComponent<Animation>().Play();
+                    gameObject.GetComponent<Animation>().Play("run");
             }
 
             else if (Input.GetKey(KeyCode.S))
             {
                 gameObject.GetComponent<Transform>().localPosition -= gameObject.GetComponent<Transform>().forward * speed / 100;
                 if (!gameObject.GetComponent<Animation>().IsPlaying("attack"))
-                    gameObject.GetComponent<Animation>().Play();
+                    gameObject.GetComponent<Animation>().Play("run");
             }
             else if (Input.GetKey(KeyCode.A))
             {
                 gameObject.GetComponent<Transform>().localPosition -= gameObject.GetComponent<Transform>().right * speed / 100;
                 if (!gameObject.GetComponent<Animation>().IsPlaying("attack"))
-                    gameObject.GetComponent<Animation>().Play();
+                    gameObject.GetComponent<Animation>().Play("run");
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 gameObject.GetComponent<Transform>().localPosition += gameObject.GetComponent<Transform>().right * speed / 100;
                 if (!gameObject.GetComponent<Animation>().IsPlaying("attack"))
-                    gameObject.GetComponent<Animation>().Play();
+                    gameObject.GetComponent<Animation>().Play("run");
             }
             else if (Input.GetKey(KeyCode.Q) && !gameObject.GetComponent<Animation>().IsPlaying("attack"))
                 gameObject.GetComponent<Animation>().Play("dance");
