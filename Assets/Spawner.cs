@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     {
         if (time > timer)
         {
-            Instantiate(enemy_prefab);
+            Instantiate(enemy_prefab, gameObject.GetComponent<Transform>().position, new Quaternion(0,0,0,0));
             time = 0.0f;
         }
         time += Time.deltaTime;
